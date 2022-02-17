@@ -47,6 +47,8 @@ class Queue {
 
     private Stack stack1,stack2;
 
+    private int size=0;
+
     public Queue(String item) {
         Stack stack1 = new Stack();
         Stack stack2 = new Stack();
@@ -57,12 +59,14 @@ class Queue {
     public void enqueue(int x) {
         while(!stack1.isEmpty()) stack2.push(stack1.pop());
         stack1.push(x);
+        size++;
         while(!stack2.isEmpty())  stack1.push(stack2.pop());
     }
 
     // Removes the element from in front of queue.
     public int dequeue() {
         if(stack1.isEmpty())  throw new NoSuchElementException("Queue underflow");
+        size--;
         return stack1.pop();
     }
     
@@ -81,7 +85,7 @@ class Queue {
 
     // Return the number of elements in queue.
     public int size() {
-        return 0;
+        return size;
     }
     
     public static void main(String[] args) {
