@@ -53,6 +53,7 @@ class Queue {
     }
 
     // Push element x to the back of queue.
+    // o(N) Use 2 stack so space can be 2*number of elements
     public void enqueue(int x) {
         while(!stack1.isEmpty()) stack2.push(stack1.pop());
         stack1.push(x);
@@ -61,7 +62,8 @@ class Queue {
 
     // Removes the element from in front of queue.
     public int dequeue() {
-        return 0;
+        if(stack1.isEmpty())  throw new NoSuchElementException("Queue underflow");
+        return stack1.pop();
     }
     
     // Get the front element.
@@ -71,8 +73,7 @@ class Queue {
     
     // Return whether the queue is empty.
     public boolean empty() {
-        return False;
-
+        
     }
 
     // Return the number of elements in queue.
