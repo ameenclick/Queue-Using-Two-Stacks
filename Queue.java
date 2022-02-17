@@ -68,7 +68,10 @@ class Queue {
     
     // Get the front element.
     public int peek() {
-        
+        if (size() == 0) throw new NoSuchElementException("Queue underflow");
+        int item=stack1.pop();
+        stack1.push(item);
+        return item;
     }
     
     // Return whether the queue is empty.
