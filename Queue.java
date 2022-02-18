@@ -84,6 +84,7 @@ class Queue {
     }
 
     // Return the number of elements in queue.
+    // Time & Space complexity of constant order o(1)
     public int size() {
         return size;
     }
