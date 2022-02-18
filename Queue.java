@@ -53,6 +53,7 @@ class Queue {
     }
 
     // Push element x to the back of queue.
+    // o(N) Use 2 stack so space can be 2*number of elements
     public void enqueue(int x) {
         while(!stack1.isEmpty()) stack2.push(stack1.pop());
         stack1.push(x);
