@@ -79,6 +79,7 @@ class Queue {
     }
     
     // Return whether the queue is empty.
+    //Time & Space Complexity of constant order o(1)
     public boolean empty() {
         return size == 0;
     }
