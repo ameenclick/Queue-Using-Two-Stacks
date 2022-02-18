@@ -61,6 +61,7 @@ class Queue {
     }
 
     // Removes the element from in front of queue.
+    //o(1) Time Complixity & Space Complexity of constant order and 
     public int dequeue() {
         if(stack1.isEmpty())  throw new NoSuchElementException("Queue underflow");
         return stack1.pop();
