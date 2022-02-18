@@ -61,12 +61,14 @@ class Queue {
     }
 
     // Removes the element from in front of queue.
+    // 0(1) Time Complexity and Constant Space complexity
     public int dequeue() {
         if(stack1.isEmpty())  throw new NoSuchElementException("Queue underflow");
         return stack1.pop();
     }
     
     // Get the front element.
+    // 0(1) Time Complexity and Constant Space complexity if 4 byte
     public int peek() {
         if (size() == 0) throw new NoSuchElementException("Queue underflow");
         int item=stack1.pop();
